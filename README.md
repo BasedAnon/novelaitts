@@ -1,90 +1,84 @@
-🎙️ NovelAI TTS Qt GUI
-A simple and user-friendly PySide6 GUI to generate and play speech using NovelAI's text-to-speech (TTS) engine. Supports:
+NovelAI TTS Qt GUI
 
-🎧 Real-time audio preview
+A simple and user-friendly PySide6 GUI to generate and play speech using NovelAI's text-to-speech (TTS) engine.
 
-🧬 Voice identity via seed (e.g. Raid, Ember+Raid, etc.)
+FEATURES
 
-🔊 Exporting audio in .mp3, .wav, or .opus format
+Real-time audio preview
 
-📁 API key management via .env file
+Voice identity via seed (e.g. Raid, Ember+Raid)
 
-📦 Features
-Generate speech using NovelAI's /ai/generate-voice endpoint
+Export audio in .mp3, .wav, or .opus format
 
-Preview audio instantly in-app
-
-Save TTS output to file in your preferred format
-
-Cross-platform GUI using PySide6
+API key managed via .env file
 
 Easy to configure and extend
 
-📂 Project Structure
-bash
-Copy
-Edit
-.
-├── tts.py               # Main GUI script
-├── .env                 # Store your NovelAI API key securely
-├── requirements.txt     # Python dependencies
-└── README.md            # You’re reading it
-🚀 Getting Started
-1. Clone the repo
-bash
-Copy
-Edit
-git clone https://github.com/YOUR_USERNAME/novelai-tts-gui.git
-cd novelai-tts-gui
-2. Install dependencies
-Make sure you’re in a virtual environment, then:
+PROJECT STRUCTURE
 
-bash
-Copy
-Edit
+tts.py -> Main GUI script
+
+.env -> Stores your NovelAI API key (not committed)
+
+requirements.txt -> Python dependencies
+
+README.txt -> This file
+
+GETTING STARTED
+
+Clone the repository
+
+git clone https://github.com/YOUR_USERNAME/novelai-tts-gui.git cd novelai-tts-gui
+
+Install dependencies (it is recommended to use a virtual environment)
+
 pip install -r requirements.txt
-3. Configure your API key
-Create a .env file with your NovelAI token:
 
-ini
-Copy
-Edit
+Configure your API key
+
+Create a .env file in the root of the project with the following line:
+
 NOVELAI_API_KEY=your_novelai_api_key_here
-Or copy the example:
 
-bash
-Copy
-Edit
+Alternatively, you can copy and edit an example:
+
 cp .env.example .env
-4. Run the app
-bash
-Copy
-Edit
+
+Run the app
+
 python tts.py
-💡 Usage
-Enter the text you want spoken.
 
-Specify a voice seed like Raid, Ember, or a blend like Ember+Raid.
+USAGE
 
-Choose whether to use .opus internally.
+Enter the text you want the voice to speak.
 
-Pick a format to save (.mp3, .wav, or .opus).
+Enter a voice seed, such as Raid, Ember, or a blend like Ember+Raid.
 
-Click Generate & Play to listen.
+Optionally check "Use Opus format" if you want the audio processed internally in opus format.
 
-Click Save Audio to export the result.
+Choose the output format: mp3, wav, or opus.
 
-🎤 Voice Tips
-Voice seed values are case-sensitive and may reflect specific speaker styles (e.g. Raid is different from raid).
+Click "Generate & Play" to preview the audio.
 
-You can blend voices using +, like Ember+Raid.
+Click "Save Audio" to export it to a file.
 
-🛠️ Built With
-PySide6 — for the Qt GUI
+VOICE TIPS
 
-Requests — to make HTTP API calls
+Voice seeds are case-sensitive. Raid and raid produce different results.
 
-python-dotenv — to securely manage your API key
+You can blend voices using a plus sign, like Ember+Raid.
 
-📄 License
-MIT – do whatever you want, just don’t blame me.
+Longer text samples will better reflect changes in voice seed and rhythm.
+
+DEPENDENCIES
+
+PySide6: for the Qt GUI
+
+requests: for sending API calls
+
+python-dotenv: for loading API key from .env
+
+LICENSE
+
+MIT License — free to use, modify, and distribute.
+Do whatever you want, just don’t blame me.
